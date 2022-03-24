@@ -17,5 +17,7 @@ puts "Creating freebies..."
 # * and a freebie belongs to a company.                         *
 # ***************************************************************
 # Create freebies Here
-
+50.times do
+    Freebie.create(dev: Dev.all.sample, company: Company.all.sample, value: rand(0..200), item_name: Faker::Commerce.product_name) 
+end
 puts "Seeding done!"
